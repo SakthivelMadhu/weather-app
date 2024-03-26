@@ -6,6 +6,12 @@
 
 This project demonstrates the integration of Weather APIs into a Spring Boot application. It allows users to fetch weather forecasts and summaries for different cities using RESTful APIs. The project includes backend services for API integration, authentication, and frontend development for displaying weather data.
 
+
+## Frontend HomePage
+![Screenshot 2024-03-26 140159](https://github.com/SakthivelMadhu/weather-app/assets/62326876/e0947a5f-bcc4-4d67-bc01-d05bda85009a)
+
+
+
 ## Functionality
 
 - Integration with Weather APIs to fetch weather forecasts and summaries.
