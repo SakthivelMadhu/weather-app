@@ -12,6 +12,7 @@ This project demonstrates the integration of Weather APIs into a Spring Boot app
 
 
 
+
 ## Functionality
 
 - Integration with Weather APIs to fetch weather forecasts and summaries.
