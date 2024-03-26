@@ -4,10 +4,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.Entity;
 
 
-@EntityScan
+// @EntityScan
+@Entity
 public class User {
 
     @Id

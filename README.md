@@ -41,7 +41,7 @@ cd weather-api-integration
 mvn spring-boot:run
 ```
 
-3. Access the application in a web browser at http://localhost:8080
+3. Access the application in a web browser at http://127.0.0.1:5500/
 
 
 # Project  Structure Explanation:

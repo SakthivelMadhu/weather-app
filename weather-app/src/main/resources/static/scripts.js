@@ -1,3 +1,23 @@
+// Dummy weather data (replace with actual data from API)
+const weatherData = {
+    cityName: "New York",
+    temperature: 20,
+    weatherCondition: "Sunny"
+};
+
+// Function to update weather information on the page
+function updateWeatherInfo() {
+    document.getElementById("cityName").innerText = weatherData.cityName;
+    document.getElementById("temperature").innerText = weatherData.temperature + "°C";
+    document.getElementById("weatherCondition").innerText = weatherData.weatherCondition;
+}
+
+// Call the updateWeatherInfo function on page load
+window.onload = updateWeatherInfo;
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     fetchWeatherData();
 });
