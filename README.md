@@ -8,8 +8,16 @@ This project demonstrates the integration of Weather APIs into a Spring Boot app
 
 
 ## Frontend HomePage
-![Screenshot 2024-03-26 140159](https://github.com/SakthivelMadhu/weather-app/assets/62326876/e0947a5f-bcc4-4d67-bc01-d05bda85009a)
 
+
+
+
+
+## Deployment links
+
+Backend Deployment : 
+
+Frontend Deployment : https://6603a22ea4541d4a140ca611--jade-mermaid-2c4abf.netlify.app/
 
 
 ## Functionality
