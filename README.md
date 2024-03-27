@@ -111,10 +111,7 @@ weather-app/
 │   │   │   │   │   │   │   ├── WeatherAPIServiceTest.java  #  contains unit tests for the WeatherAPIService class
 ├── pom.xml                                                 # Maven project configuration file
 ├── README.md                                               # Project documentation
-frontend
-├── index.html                                  # Frontend HTML file
-├── styles.css                                  # Frontend CSS file
-├── scripts.js                                  # Frontend JavaScript file
+
 ```
 
 

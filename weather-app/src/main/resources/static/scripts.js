@@ -1,58 +1,40 @@
-// Dummy weather data (replace with actual data from API)
-const weatherData = {
-    cityName: "New York",
-    temperature: 20,
-    weatherCondition: "Sunny"
-};
-
-// Function to update weather information on the page
-function updateWeatherInfo() {
-    document.getElementById("cityName").innerText = weatherData.cityName;
-    document.getElementById("temperature").innerText = weatherData.temperature + "°C";
-    document.getElementById("weatherCondition").innerText = weatherData.weatherCondition;
-}
-
-// Call the updateWeatherInfo function on page load
-window.onload = updateWeatherInfo;
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    fetchWeatherData();
+const url =
+    'https://api.openweathermap.org/data/2.5/weather';
+const apiKey =
+    'f00c38e0279b7bc85480c3fe775d518c';
+ 
+$(document).ready(function () {
+    weatherFn('Bangalore');
 });
-
-function fetchWeatherData() {
-    fetch("http://localhost:8080/weather-summary?city=London", {
-        headers: {
-            "client-id": "your-client-id",
-            "client-secret": "your-client-secret"
+ 
+async function weatherFn(cName) {
+    const temp =
+        `${url}?q=${cName}&appid=${apiKey}&units=metric`;
+    try {
+        const res = await fetch(temp);
+        const data = await res.json();
+        if (res.ok) {
+            weatherShowFn(data);
+        } else {
+            alert('City not found. Please try again.');
         }
-    })
-    .then(response => response.json())
-    .then(data => {
-        displayWeatherData(data);
-    })
-    .catch(error => {
-        console.error("Error fetching weather data:", error);
-    });
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
 }
-
-function displayWeatherData(data) {
-    const weatherInfo = document.getElementById("weather-info");
-    weatherInfo.innerHTML = `
-        <h2>${data.city}</h2>
-        <p>Summary: ${data.summary}</p>
-        <p>Temperature: ${data.temperature}°C</p>
-        <p>Humidity: ${data.humidity}%</p>
-    `;
+ 
+function weatherShowFn(data) {
+    $('#city-name').text(data.name);
+    $('#date').text(moment().
+        format('MMMM Do YYYY, h:mm:ss a'));
+    $('#temperature').
+        html(`${data.main.temp}°C`);
+    $('#description').
+        text(data.weather[0].description);
+    $('#wind-speed').
+        html(`Wind Speed: ${data.wind.speed} m/s`);
+    $('#weather-icon').
+        attr('src',
+            `...`);
+    $('#weather-info').fadeIn();
 }
-
-
-
-fetchWeatherData().then(data => {
-    displayWeatherData(data);
-}).catch(error => {
-    console.error("Error fetching weather data:", error);
-    // Display an error message to the user
-});
