@@ -17,10 +17,14 @@ This project demonstrates the integration of Weather APIs into a Spring Boot app
 
 ## Deployment links
 
-Backend Deployment : weather-app-production-1e28.up.railway.app
-
-Frontend Deployment : https://6603a22ea4541d4a140ca611--jade-mermaid-2c4abf.netlify.app/
-
+Backend Deployment : 
+```bash
+weather-app-production-26ae.up.railway.app
+```
+Frontend Deployment : 
+```bash
+https://6603a22ea4541d4a140ca611--jade-mermaid-2c4abf.netlify.app/
+```
 
 ## Functionality
 
